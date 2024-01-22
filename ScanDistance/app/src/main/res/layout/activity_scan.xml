@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/titleSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/geolocation_distance_calculator"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleSection"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/targetLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/surfaceView"
+        android:layout_marginTop="10dp"
+        android:text="@string/target_location"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txtBarcodeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/targetLoc"
+        android:layout_marginTop="10dp"
+        android:text="@string/no_qrcode_detected"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtBarcodeValue"
+        android:layout_marginTop="10dp"
+        android:text="@string/scanning"
+        android:onClick="onCalculateDistanceClick"/>
+
+    <TextView
+        android:id="@+id/currentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="10dp"
+        android:text="@string/current_location"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/currentLatVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/currentLocation"
+        android:layout_marginTop="10dp"
+        android:text="@string/_000_00000"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/currentLonVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/currentLatVal"
+        android:layout_marginTop="10dp"
+        android:text="@string/_000_00000"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/calculatedDis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/currentLonVal"
+        android:layout_marginTop="10dp"
+        android:text="@string/distance"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/calculatedVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/calculatedDis"
+        android:layout_marginTop="10dp"
+        android:text="@string/_0000_0000"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+</RelativeLayout>
